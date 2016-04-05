@@ -1,0 +1,10 @@
+---
+platform: linux
+
+image: docker:///ubuntu
+
+inputs:
+- name: resource-test01
+
+run:
+  path: ./resource-test01/test01/set-data.sh

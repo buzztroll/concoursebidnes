@@ -7,4 +7,6 @@ inputs:
 - name: resource-test01
 
 run:
-  path: resource-test01/test01/install-apache.sh
+  # path: resource-test01/test01/install-apache.sh
+  path: find
+  args: .

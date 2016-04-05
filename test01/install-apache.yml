@@ -4,7 +4,7 @@ platform: linux
 image: docker:///busybox
 
 inputs:
-- name: test01
+- name: resource-test01
 
 run:
   path: resource-test01/test01/install-apache.sh

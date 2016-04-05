@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cp index.html /var/www/html/index.html
+cp resource-test01/test01/index.html /var/www/html/index.html

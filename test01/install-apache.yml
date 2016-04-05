@@ -9,4 +9,4 @@ inputs:
 run:
   # path: resource-test01/test01/install-apache.sh
   path: find
-  args: .
+  args: [.]

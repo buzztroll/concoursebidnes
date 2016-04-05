@@ -8,5 +8,5 @@ inputs:
 
 run:
 #  path: ./resource-test01/test01/install-apache.sh
-  path: ls
-  args: [-l, ./resource-test01/test01/install-apache.sh]
+  path: bash
+  args: [./resource-test01/test01/install-apache.sh]

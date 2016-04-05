@@ -4,4 +4,4 @@ platform: linux
 image: docker:///busybox
 
 run:
-  path: ./test01/install-apache.sh
+  path: ./install-apache.sh

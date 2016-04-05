@@ -11,3 +11,5 @@ jobs:
   - get: resource-test01
   - task: install-apache
     file: resource-test01/test01/install-apache.yml
+  - task: set-data
+    file: resource-test01/test01/set-data.yml

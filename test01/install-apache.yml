@@ -1,7 +1,7 @@
 ---
 platform: linux
 
-image: docker:///busybox
+image: docker:///ubuntu
 
 inputs:
 - name: resource-test01

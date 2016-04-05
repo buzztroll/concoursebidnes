@@ -1,0 +1,25 @@
+---
+jobs:  
+- name: build-docker-packer-image
+  public: true
+  serial: true
+  plan:
+  - get: packer-docker-file
+    trigger: true
+  - put: docker-packer-image
+    params:
+      build: packer-docker-file/test01/docker_packer_image/packer_image
+
+resources:  
+- name: packer-docker-file
+  type: git
+  source:
+    uri: https://github.com/buzztroll/concoursebidnes.git
+    paths: [test01/docker_packer_image/packer_image/*]
+- name: docker-packer-image
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-create-concourse-go-image}}

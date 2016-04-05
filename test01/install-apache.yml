@@ -4,4 +4,4 @@ platform: linux
 image: docker:///busybox
 
 run:
-  path: ls
+  path: pwd

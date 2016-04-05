@@ -1,0 +1,13 @@
+resources:
+- name: resource-test01
+  type: git
+  source:
+    uri: https://github.com/buzztroll/concoursebidnes.git
+
+jobs:
+- name: buzzstart
+  public: true
+  plan: 
+  - get: resource-test01
+  - task: install-apache
+    file: concoursebidnes/install-apache.yml

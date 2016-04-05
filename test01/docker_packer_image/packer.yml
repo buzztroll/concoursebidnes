@@ -1,0 +1,8 @@
+---
+platform: linux
+
+image: docker:///{{docker-create-concourse-go-image}}
+
+run:
+  path: echo
+  args: [fart]

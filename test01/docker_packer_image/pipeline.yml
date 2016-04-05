@@ -9,13 +9,14 @@ jobs:
   - put: docker-packer-image
     params:
       build: packer-docker-file/test01/docker_packer_image/packer_image
+  - task: pack-it
+    file: packer-docker-file/test01/docker_packer_image/packer.yml
 
 resources:  
 - name: packer-docker-file
   type: git
   source:
     uri: https://github.com/buzztroll/concoursebidnes.git
-    paths: [test01/docker_packer_image/packer_image/*]
 - name: docker-packer-image
   type: docker-image
   source:
@@ -23,3 +24,5 @@ resources:
     username: {{docker-hub-username}}
     password: {{docker-hub-password}}
     repository: {{docker-create-concourse-go-image}}
+
+

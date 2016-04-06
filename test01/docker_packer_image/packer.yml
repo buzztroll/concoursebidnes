@@ -1,7 +1,14 @@
 ---
 platform: linux
 
-image: docker:///{{docker-create-concourse-go-image}}
+
+image_resource:
+  type: docker-image
+  source:
+    repository: {{docker-create-concourse-go-image}}
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
 
 run:
   path: echo

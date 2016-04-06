@@ -19,6 +19,7 @@ resources:
     uri: https://github.com/buzztroll/concoursebidnes.git
 - name: docker-packer-image
   type: docker-image
+  tag: 1.0
   source:
     email: {{docker-hub-email}}
     username: {{docker-hub-username}}
